@@ -38,23 +38,39 @@ export function ImageGallery() {
     setCurrentIndex((prev) => (prev - 1 + galleryImages.length) % galleryImages.length)
   }
 
-  const visibleImages = [
+  // Mobile: show 1 image, Desktop: show 3 images
+  const mobileVisibleImages = [galleryImages[currentIndex]]
+  const desktopVisibleImages = [
     galleryImages[currentIndex],
     galleryImages[(currentIndex + 1) % galleryImages.length],
     galleryImages[(currentIndex + 2) % galleryImages.length],
   ]
 
-  const hasMoreImages = galleryImages.length > 3
+  const hasMoreImages = galleryImages.length > 1
 
   return (
     <section className="bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="border border-gray-200">
           <div className="p-8 md:p-12 border-b border-gray-200">
-            <div className="flex items-center justify-between">
-              <div className="flex gap-4 flex-1">
-                {visibleImages.map((image, index) => (
-                  <div key={`${currentIndex}-${index}`} className="flex-1">
+            <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
+              {/* Mobile: Single image layout */}
+              <div className="flex gap-4 flex-1 lg:hidden">
+                {mobileVisibleImages.map((image, index) => (
+                  <div key={`mobile-${currentIndex}-${index}`} className="flex-1">
+                    <img
+                      src={image.src || "/placeholder.svg"}
+                      alt={image.alt}
+                      className="w-full h-64 object-cover grayscale"
+                    />
+                  </div>
+                ))}
+              </div>
+
+              {/* Desktop: Three image layout */}
+              <div className="hidden lg:flex gap-4 flex-1">
+                {desktopVisibleImages.map((image, index) => (
+                  <div key={`desktop-${currentIndex}-${index}`} className="flex-1">
                     <img
                       src={image.src || "/placeholder.svg"}
                       alt={image.alt}
@@ -65,7 +81,7 @@ export function ImageGallery() {
               </div>
 
               {hasMoreImages && (
-                <div className="flex gap-2 ml-8">
+                <div className="flex gap-2 justify-center lg:ml-8 lg:justify-start">
                   <button
                     onClick={prevImage}
                     className="relative inline-flex h-12 w-12 overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50"

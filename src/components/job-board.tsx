@@ -33,7 +33,7 @@ const jobs = [
 
 export function JobBoard() {
     return (
-      <div className="bg-black text-white pb-16 md:pb-24">
+      <div id="job-board" className="bg-black text-white pb-16 md:pb-24">
         <div className="max-w-7xl mx-auto px-8 md:px-12">
           {/* Header Section */}
           <div className="mb-12 pt-16 md:pt-24">
