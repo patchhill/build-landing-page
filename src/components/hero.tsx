@@ -23,7 +23,7 @@ export function Hero() {
       {/* Content */}
       <div className="relative z-10 text-center text-white max-w-4xl mx-auto px-6 space-y-4 flex-1 flex flex-col justify-center">
         {/* Notification Banner */}
-        <div className="inline-block">
+        <div className="inline-block md:-mb-1">
           <div className="relative inline-flex items-center bg-[#0F0F0E] backdrop-blur-sm opacity-80 rounded-full px-4 py-2 border border-[#3B3938] overflow-hidden">
             <div className="absolute inset-0">
               <SparklesCore
@@ -53,7 +53,7 @@ export function Hero() {
           AI for the Built World
         </h1>
 
-        <p className="text-base text-white/90 max-w-2xl mx-auto leading-relaxed">
+        <p className="text-base text-white/90 max-w-2xl mx-auto leading-relaxed -mt-2 md:-mt-6">
           Build is an automation company for the Built World, accelerating the world's most important projects from
           concept to construction.
         </p>
