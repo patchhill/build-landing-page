@@ -20,20 +20,19 @@ export function NewsContent() {
                 {/* Logo Card Overlay */}
                 <div className="absolute inset-0 flex items-center justify-center">
                   {/* Secondary border card with opacity */}
-                  <div className="bg-white/40 p-2 shadow-lg">
+                  <div className="bg-white/40 p-3 md:p-4 shadow-lg">
                     {/* Main content card */}
-                    <div className="bg-white p-8 md:p-12">
-                      <div className="flex items-center justify-center space-x-6">
+                    <div className="bg-white p-8 md:p-12 lg:p-16 max-w-sm lg:max-w-md">
+                      <div className="flex flex-col items-center justify-center space-y-6">
                         <img 
                           src="https://poygapaqkrcgwyzdamkt.supabase.co/storage/v1/object/public/site/build-logo-black.png" 
                           alt="Build" 
-                          className="h-12 w-auto" 
+                          className="h-10 md:h-14 lg:h-16 w-auto" 
                         />
-                        <span className="text-2xl font-serif text-gray-400">/</span>
                         <img 
                           src="https://poygapaqkrcgwyzdamkt.supabase.co/storage/v1/object/public/site/build-ashton-black.png" 
                           alt="Aston" 
-                          className="h-12 w-auto" 
+                          className="h-10 md:h-14 lg:h-16 w-auto" 
                         />
                       </div>
                     </div>
@@ -43,14 +42,14 @@ export function NewsContent() {
             </div>
 
             {/* Right Column - Title Only */}
-            <div className="p-8 md:p-12 flex flex-col justify-center">
+            <div className="p-6 md:p-8 lg:p-12 flex flex-col justify-center">
               <div>
-                <h2 className="text-[44px] font-serif text-gray-900 leading-tight">
+                <h2 className="text-2xl md:text-3xl lg:text-[44px] font-serif text-gray-900 leading-tight">
                   Build & Aston Labs announce partnership to integrate AI into developing independent power networks.
                 </h2>
                 
-                <div className="pt-6">
-                  <p className="text-sm font-sans text-gray-500">
+                <div className="pt-4 md:pt-6">
+                  <p className="text-xs md:text-sm font-sans text-gray-500">
                     Press Release • January 2025
                   </p>
                 </div>
