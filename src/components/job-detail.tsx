@@ -31,7 +31,7 @@ export function JobDetail({ job }: JobDetailProps) {
                   {job.category}
                 </span>
               </div>
-              <h1 className="text-[64px] md:text-[72px] lg:text-[80px] font-serif font-light leading-none text-gray-900">
+              <h1 className="text-[36px] md:text-[52px] lg:text-[64px] font-serif font-light leading-tight text-gray-900">
                 {job.title}
               </h1>
               <div className="flex flex-wrap justify-center gap-6 text-sm text-gray-600">

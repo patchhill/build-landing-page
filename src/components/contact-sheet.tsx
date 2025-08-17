@@ -27,7 +27,7 @@ export function ContactSheet() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     
-    setButtonText("Sending message...")
+    setButtonText("Submitting...")
     setShowSuccessMessage(false)
     setShowFailureMessage(false)
     
