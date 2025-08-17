@@ -2,13 +2,14 @@
 
 import type React from "react"
 
-import { useState } from "react"
+import { useState, useEffect, useRef } from "react"
 import { Dialog, DialogBackdrop, DialogPanel } from "@headlessui/react"
 import { X, ChevronDown } from "lucide-react"
 import { useContactStore } from "@/lib/contact-store"
 
 export function ContactSheet() {
   const { isOpen, closeContactSheet } = useContactStore()
+  const firstNameInputRef = useRef<HTMLInputElement>(null)
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -23,6 +24,8 @@ export function ContactSheet() {
   const [buttonText, setButtonText] = useState("Submit")
   const [showSuccessMessage, setShowSuccessMessage] = useState(false)
   const [showFailureMessage, setShowFailureMessage] = useState(false)
+
+
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -94,6 +97,23 @@ export function ContactSheet() {
     setFormData((prev) => ({ ...prev, [field]: value }))
   }
 
+  // on open, focus the first name input
+  useEffect(() => {
+    if (isOpen) {
+      const focusInput = () => {
+        if (firstNameInputRef.current) {
+          firstNameInputRef.current.focus()
+        } else {
+          requestAnimationFrame(focusInput)
+        }
+      }
+      
+      setTimeout(() => {
+        requestAnimationFrame(focusInput)
+      }, 100)
+    }
+  }, [isOpen])
+
   return (
     <Dialog open={isOpen} onClose={closeContactSheet} className="relative z-50">
       {/* Backdrop */}
@@ -103,7 +123,14 @@ export function ContactSheet() {
       <div className="fixed inset-0 overflow-hidden">
         <div className="absolute inset-0 overflow-hidden">
           <div className="pointer-events-none fixed inset-y-0 right-0 flex max-w-full pl-10">
-            <DialogPanel className="pointer-events-auto relative w-screen max-w-2xl transform transition duration-300 ease-in-out data-[closed]:translate-x-full sm:duration-700">
+            <DialogPanel 
+              className="pointer-events-auto relative w-screen max-w-2xl transform transition duration-300 ease-in-out data-[closed]:translate-x-full sm:duration-700"
+              onTransitionEnd={() => {
+                if (isOpen && firstNameInputRef.current) {
+                  firstNameInputRef.current.focus()
+                }
+              }}
+            >
               <div className="flex h-full flex-col overflow-y-scroll bg-white shadow-xl">
         {/* Header */}
         <div className="flex items-start justify-between p-8 pb-6">
@@ -129,6 +156,7 @@ export function ContactSheet() {
                 FIRST NAME: <span className="text-red-500">*</span>
               </label>
               <input
+                ref={firstNameInputRef}
                 type="text"
                 required
                 value={formData.firstName}
@@ -284,14 +312,14 @@ export function ContactSheet() {
           )}
 
           {/* Footer */}
-          <div className="flex items-center justify-between mt-8 pt-6">
+          <div className="flex flex-col md:flex-row md:items-center md:justify-between mt-8 pt-6 gap-4 md:gap-0">
             <p className="text-xs text-gray-500 max-w-md">
               PLEASE SEE OUR PRIVACY POLICY FOR MORE INFORMATION ON HOW WE HANDLE THIS INFORMATION.
             </p>
             <button
               type="submit"
               disabled={buttonText !== "Submit"}
-              className="bg-black text-white px-8 py-3 rounded-lg font-medium hover:bg-gray-800 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+              className="bg-black text-white px-8 py-3 rounded-lg font-medium hover:bg-gray-800 transition-colors disabled:opacity-50 disabled:cursor-not-allowed w-full md:w-auto"
             >
               {buttonText}
             </button>
