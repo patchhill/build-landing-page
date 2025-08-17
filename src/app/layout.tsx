@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Build - AI for the Built World",
     description: "Build is an automation company for the Built World, accelerating the world's most important projects from concept to construction.",
-    url: "https://buildhq.ai",
+    url: "https://build.inc",
     siteName: "Build",
     images: [
       {
