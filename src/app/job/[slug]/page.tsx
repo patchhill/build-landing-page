@@ -1,3 +1,4 @@
+import { Metadata } from "next"
 import { notFound } from "next/navigation"
 import { AnnouncementBanner } from "@/components/annoucement-banner"
 import { Header } from "@/components/header"
@@ -97,6 +98,35 @@ const jobsData = {
       "Excellent presentation and communication skills",
       "Experience with Salesforce and modern sales tech stack"
     ]
+  }
+}
+
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params
+  const job = jobsData[slug as keyof typeof jobsData]
+
+  if (!job) {
+    return {
+      title: "Job Not Found - Build Careers",
+      description: "The requested job position could not be found.",
+    }
+  }
+
+  return {
+    title: `${job.title} - Build Careers`,
+    description: job.description,
+    keywords: `${job.title}, ${job.category}, ${job.location}, Build careers, construction jobs, AI development jobs`,
+    openGraph: {
+      title: `${job.title} - Build Careers`,
+      description: job.description,
+      type: "website",
+      url: `https://build.com/job/${slug}`,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${job.title} - Build Careers`,
+      description: job.description,
+    },
   }
 }
 
