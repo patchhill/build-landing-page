@@ -108,7 +108,7 @@ export function SecurityFeatures() {
                   alt="Audit stamp icon"
                   width={48}
                   height={48}
-                  className="mx-auto object-contain"
+                  className="object-contain"
                 />
               </div>
               <h3 className="text-lg font-semibold font-sans text-gray-900 mb-4">Audited & tested</h3>

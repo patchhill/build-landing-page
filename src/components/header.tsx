@@ -26,7 +26,7 @@ export function Header() {
 
   return (
     <header className={`${headerPosition} left-0 right-0 z-40 ${headerBg} border-b ${borderColor}`}>
-      <div className="max-w-7xl mx-auto px-6 md:px-10 py-4">
+      <div className="max-w-7xl mx-auto px-6 md:px-12 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center">
