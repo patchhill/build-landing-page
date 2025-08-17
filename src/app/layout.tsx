@@ -14,6 +14,28 @@ export const metadata: Metadata = {
   title: "Build - AI for the Built World",
   description:
     "Build is an automation company for the Built World, accelerating the world's most important projects from concept to construction.",
+  openGraph: {
+    title: "Build - AI for the Built World",
+    description: "Build is an automation company for the Built World, accelerating the world's most important projects from concept to construction.",
+    url: "https://buildhq.ai",
+    siteName: "Build",
+    images: [
+      {
+        url: "/build-og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Build - AI for the Built World",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Build - AI for the Built World",
+    description: "Build is an automation company for the Built World, accelerating the world's most important projects from concept to construction.",
+    images: ["/build-og-image.jpg"],
+  },
 }
 
 export default function RootLayout({
