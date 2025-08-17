@@ -63,12 +63,12 @@ export function Header() {
 
           {/* Desktop Auth Buttons */}
           <div className="hidden md:flex items-center space-x-3">
-            <button className={`text-xs ${textColor} ${buttonHover} px-3 py-1.5 rounded-lg`}>
+            <button className={`text-xs ${textColor} ${buttonHover} px-3 py-1.5 rounded-lg focus:outline-none`}>
               Log in
             </button>
             <button 
               onClick={openContactSheet}
-              className="relative inline-flex h-8 overflow-hidden rounded-lg p-[1px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50"
+              className="relative inline-flex h-8 overflow-hidden rounded-lg p-[1px] focus:outline-none"
             >
               <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#3B3938_0%,#6B6968_50%,#3B3938_100%)]" />
               <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-lg bg-[#0F0F0E] px-3 py-1 text-xs text-white backdrop-blur-3xl">
@@ -81,7 +81,7 @@ export function Header() {
           <div className="md:hidden flex items-center space-x-3">
             <button 
               onClick={openContactSheet}
-              className="relative inline-flex h-8 overflow-hidden rounded-lg p-[1px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50"
+              className="relative inline-flex h-8 overflow-hidden rounded-lg p-[1px] focus:outline-none"
             >
               <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#3B3938_0%,#6B6968_50%,#3B3938_100%)]" />
               <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-lg bg-[#0F0F0E] px-3 py-1 text-xs text-white backdrop-blur-3xl">
@@ -90,7 +90,7 @@ export function Header() {
             </button>
             <button
               onClick={() => setMobileMenuOpen(true)}
-              className={`p-2 ${buttonHover} rounded-lg`}
+              className={`p-2 ${buttonHover} rounded-lg focus:outline-none`}
               aria-label="Open menu"
             >
               {/* Three-line menu icon */}
@@ -122,7 +122,7 @@ export function Header() {
                     />
                     <button
                       onClick={() => setMobileMenuOpen(false)}
-                      className="p-2 hover:bg-gray-100 rounded-lg transition-colors"
+                      className="p-2 hover:bg-gray-100 rounded-lg transition-colors focus:outline-none"
                       aria-label="Close menu"
                     >
                       <X className="w-5 h-5 text-gray-500" />
@@ -177,7 +177,7 @@ export function Header() {
 
                   {/* Footer Actions */}
                   <div className="border-t border-gray-200 p-6 space-y-4">
-                    <button className="w-full relative inline-flex h-11 overflow-hidden rounded-lg p-[1px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
+                    <button className="w-full relative inline-flex h-11 overflow-hidden rounded-lg p-[1px] focus:outline-none">
                       <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#3B3938_0%,#6B6968_50%,#3B3938_100%)]" />
                       <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-lg bg-zinc-50 px-4 py-2 text-base text-gray-900 backdrop-blur-3xl">
                         Log in
@@ -188,7 +188,7 @@ export function Header() {
                         setMobileMenuOpen(false)
                         openContactSheet()
                       }}
-                      className="w-full relative inline-flex h-11 overflow-hidden rounded-lg p-[1px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50"
+                      className="w-full relative inline-flex h-11 overflow-hidden rounded-lg p-[1px] focus:outline-none"
                     >
                       <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#3B3938_0%,#6B6968_50%,#3B3938_100%)]" />
                       <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-lg bg-[#0F0F0E] px-4 py-2 text-base text-white backdrop-blur-3xl">

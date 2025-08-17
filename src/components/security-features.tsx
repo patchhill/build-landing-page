@@ -144,7 +144,7 @@ export function SecurityFeatures() {
                   />
                 </div>
                 <h3 className="text-sm font-sans text-gray-900 mb-4">SOC2 II (In Observation)</h3>
-                <button className="inline-flex items-center text-sm font-sans text-gray-900 hover:text-gray-700 transition-colors">
+                <button className="inline-flex items-center text-sm font-sans text-gray-900 hover:text-gray-700 transition-colors focus:outline-none">
                   Details
                   <ArrowUpRight className="ml-1 w-4 h-4" />
                 </button>
@@ -162,7 +162,7 @@ export function SecurityFeatures() {
                   />
                 </div>
                 <h3 className="text-sm font-sans text-gray-900 mb-4">GDPR</h3>
-                <button className="inline-flex items-center text-sm font-sans text-gray-900 hover:text-gray-700 transition-colors">
+                <button className="inline-flex items-center text-sm font-sans text-gray-900 hover:text-gray-700 transition-colors focus:outline-none">
                   Details
                   <ArrowUpRight className="ml-1 w-4 h-4" />
                 </button>
@@ -180,7 +180,7 @@ export function SecurityFeatures() {
                   />
                 </div>
                 <h3 className="text-sm font-sans text-gray-900 mb-4">CCPA</h3>
-                <button className="inline-flex items-center text-sm font-sans text-gray-900 hover:text-gray-700 transition-colors">
+                <button className="inline-flex items-center text-sm font-sans text-gray-900 hover:text-gray-700 transition-colors focus:outline-none">
                   Details
                   <ArrowUpRight className="ml-1 w-4 h-4" />
                 </button>
@@ -213,7 +213,7 @@ export function SecurityFeatures() {
 
                   <div className="flex flex-col items-start gap-4 pt-4">
                     <div className="inline-block">
-                      <button className="relative inline-flex h-10 overflow-hidden rounded-lg p-[1px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
+                      <button className="relative inline-flex h-10 overflow-hidden rounded-lg p-[1px] focus:outline-none">
                         <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#3B3938_0%,#6B6968_50%,#3B3938_100%)]" />
                         <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-lg bg-[#0F0F0E] px-6 py-2 text-sm text-white backdrop-blur-3xl">
                           Request Security Questionnaire
@@ -221,7 +221,7 @@ export function SecurityFeatures() {
                       </button>
                     </div>
                     <div className="inline-block">
-                      <button className="relative inline-flex h-10 overflow-hidden rounded-lg p-[1px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
+                      <button className="relative inline-flex h-10 overflow-hidden rounded-lg p-[1px] focus:outline-none">
                         <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#3B3938_0%,#6B6968_50%,#3B3938_100%)]" />
                         <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-lg bg-[#0F0F0E] px-6 py-2 text-sm text-white backdrop-blur-3xl">
                           Security at Build

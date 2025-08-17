@@ -142,7 +142,7 @@ export function ContactSheet() {
               Interested in solving your problems with Build?
             </h2>
           </div>
-          <button onClick={closeContactSheet} className="ml-4 p-2 hover:bg-gray-100 rounded-full transition-colors">
+          <button onClick={closeContactSheet} className="ml-4 p-2 hover:bg-gray-100 rounded-full transition-colors focus:outline-none">
             <X className="w-5 h-5 text-gray-500" />
           </button>
         </div>

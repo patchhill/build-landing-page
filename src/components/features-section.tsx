@@ -101,7 +101,7 @@ export function FeaturesSection() {
 
                   <button 
                     onClick={openContactSheet}
-                    className="relative inline-flex h-8 overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 mb-8"
+                    className="relative inline-flex h-8 overflow-hidden rounded-full p-[1px] focus:outline-none mb-8"
                   >
                     <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#3B3938_0%,#6B6968_50%,#3B3938_100%)]" />
                     <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-[#0F0F0E] px-4 py-2 text-[12px] font-sans text-white backdrop-blur-3xl">

@@ -84,7 +84,7 @@ export function ImageGallery() {
                 <div className="flex gap-2 justify-center lg:ml-8 lg:justify-start">
                   <button
                     onClick={prevImage}
-                    className="relative inline-flex h-12 w-12 overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50"
+                    className="relative inline-flex h-12 w-12 overflow-hidden rounded-full p-[1px] focus:outline-none"
                     aria-label="Previous image"
                   >
                     <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#3B3938_0%,#6B6968_50%,#3B3938_100%)]" />
@@ -94,7 +94,7 @@ export function ImageGallery() {
                   </button>
                   <button
                     onClick={nextImage}
-                    className="relative inline-flex h-12 w-12 overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50"
+                    className="relative inline-flex h-12 w-12 overflow-hidden rounded-full p-[1px] focus:outline-none"
                     aria-label="Next image"
                   >
                     <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#3B3938_0%,#6B6968_50%,#3B3938_100%)]" />
